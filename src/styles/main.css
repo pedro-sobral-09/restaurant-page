@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-default: "Oswald", arial;
+    --font-special: "Bebas Neue", arial;
+
+    --bg-color1: #8EB9FC;
+    --bg-color2: #274DEA;
+    --bg-color3: #1f3aa5;
+    --bg-color4: #15235c;
+
+    --font-color1: #FFF197;
+    --font-color2: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color1);
+    font-family: var(--font-default);
+    color: var(--font-color1);
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--bg-color2);
+    min-height: 12vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 0px 5px black;
+}
+
+header h1 {
+    font-family: var(--font-special);
+    font-size: 3em;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+header button {
+    padding: 0.6em;
+    cursor: pointer;
+    color: var(--font-color1);
+    background-color: var(--bg-color2);
+    border: none;
+    border-radius: 0.5em;
+    font-family: var(--font-default);
+    font-size: 1.5em;
+}
+
+header button:hover {
+    background-color: var(--bg-color3);
+}
+
+header button:active {
+    background-color: var(--bg-color4);
+    color: var(--font-color2);
+}
