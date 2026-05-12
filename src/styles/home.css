@@ -1,0 +1,72 @@
+.hero-section {
+    padding: 1.5em;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "hero-title hero-image"
+                        "hero-subtitle hero-image"
+}
+
+.hero-title {
+    grid-area: hero-title;
+    font-size: 6em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    grid-area: hero-image;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.hero-subtitle {
+    grid-area: hero-subtitle;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-subtitle .p-subtitle {
+    font-size: 2em;
+    text-align: center;
+    max-width: 70%;
+}
+
+.hero-subtitle .button-subtitle {
+    padding: 0.7em;
+    cursor: pointer;
+    color: var(--font-color1);
+    background-color: var(--bg-color2);
+    border: none;
+    border-radius: 0.5em;
+    font-family: var(--font-default);
+    font-size: 1.75em;
+}
+
+.hero-subtitle .button-subtitle:hover {
+    background-color: var(--bg-color3);
+    transform: scale(0.9);
+}
+
+.hero-subtitle .button-subtitle:active {
+    background-color: var(--bg-color4);
+    color: var(--font-color2);
+}

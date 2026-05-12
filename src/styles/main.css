@@ -10,7 +10,7 @@
     --font-default: "Oswald", arial;
     --font-special: "Bebas Neue", arial;
 
-    --bg-color1: #8EB9FC;
+    --bg-color1: #8eb9fc;
     --bg-color2: #274DEA;
     --bg-color3: #1f3aa5;
     --bg-color4: #15235c;
@@ -23,6 +23,7 @@ body {
     background-color: var(--bg-color1);
     font-family: var(--font-default);
     color: var(--font-color1);
+    text-shadow: 2px 2px 3px black;
     min-height: 100vh;
 }
 
@@ -54,11 +55,12 @@ header button {
     border: none;
     border-radius: 0.5em;
     font-family: var(--font-default);
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 header button:hover {
     background-color: var(--bg-color3);
+    transform: scale(0.9);
 }
 
 header button:active {

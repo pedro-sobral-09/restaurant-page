@@ -9,10 +9,6 @@ export default {
     path: path.resolve(import.meta.dirname, "dist"),
     clean: true,
   },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/index.html"],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -27,6 +23,10 @@ export default {
       {
         test: /\.html$/i,
         use: ["html-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        type: "asset/resource",
       },
     ],
   },
