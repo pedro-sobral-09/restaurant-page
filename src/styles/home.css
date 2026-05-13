@@ -72,8 +72,7 @@
 }
 
 .feature-section {
-    margin: auto;
-    margin-top: 2em;
+    margin: 3em auto;
     width: 80%;
     padding: 2em;
     background-color: var(--bg-color2);
@@ -100,4 +99,29 @@
     padding: 1em;
     border: 1px solid #ffffff;
     border-radius: 0.5em;
+    display: flex;
+    align-items: center;
 }
+
+.feature-section .feature-card:hover {
+    transform: scale(0.9);
+}
+
+.quote-section {
+    text-align: center;
+}
+
+.quote-section .quote-section-title {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.quote-section .block-quote {
+    padding: 1em;
+    margin: auto;
+    background-color: lightgray;
+    border: 1px solid black;
+    width: 50%;
+    font-size: 2em;
+}
+

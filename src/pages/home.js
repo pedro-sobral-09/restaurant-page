@@ -6,6 +6,7 @@ export default function loadHome(){
 
     content.appendChild(createHeroSection());
     content.appendChild(createFeatureSection());
+    content.appendChild(createQuoteSection());
 }
 
 function createHeroSection(){
@@ -52,4 +53,21 @@ function createCards(){
     container.appendChild(createElement("p", "feature-card", "Our chefs combine passion and creativity to craft unforgettable dishes.", ""));
 
     return container;
+}
+
+function createQuoteSection(){
+    const quoteSection = createElement("section", "quote-section");
+
+    quoteSection.appendChild(createElement("h2", "quote-section-title", "Founded with a passion for great food..."));
+    quoteSection.appendChild(createBlockQuote());
+
+    return quoteSection;
+}
+
+function createBlockQuote(){
+    const blockQuote = createElement("blockquote", "block-quote");
+
+    blockQuote.appendChild(createElement("p", "quote", `"Bringing people together through exceptional food."`));
+
+    return blockQuote;
 }
