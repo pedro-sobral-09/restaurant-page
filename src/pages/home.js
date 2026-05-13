@@ -1,14 +1,18 @@
 import createElement from "./createElement.js";
 import heroImage from "../assets/images/heroImage.png";
 import createFooter from "./footer.js";
+import loadMenu from "./menu.js";
 
 export default function loadHome(){
     const content = document.querySelector("#content");
+    content.innerHTML = ``;
 
     content.appendChild(createHeroSection());
     content.appendChild(createFeatureSection());
     content.appendChild(createQuoteSection());
     content.appendChild(createFooter());
+
+    addEventForViewMenu();
 }
 
 function createHeroSection(){
@@ -29,7 +33,7 @@ function createHeroSubtitle(){
     const subtitle = createElement("div", "hero-subtitle", "");
     
     subtitle.appendChild(createElement("p", "p-subtitle", "Fresh ingredients. Handmade dishes. Memorable experiences."));
-    subtitle.appendChild(createElement("button", "button-subtitle menu", "View Menu"));
+    subtitle.appendChild(createElement("button", "button-subtitle btn-menu", "View Menu"));
     
     return subtitle;
 }
@@ -72,4 +76,12 @@ function createBlockQuote(){
     blockQuote.appendChild(createElement("p", "quote", `"Bringing people together through exceptional food."`));
 
     return blockQuote;
+}
+
+function addEventForViewMenu(){
+    const btnMenu = document.querySelectorAll(".btn-menu");
+
+    btnMenu.forEach(btn => {
+        btn.addEventListener("click", loadMenu);
+    });
 }
