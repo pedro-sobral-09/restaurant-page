@@ -1,5 +1,6 @@
 import createElement from "./createElement.js";
 import heroImage from "../assets/images/heroImage.png";
+import createFooter from "./footer.js";
 
 export default function loadHome(){
     const content = document.querySelector("#content");
@@ -7,6 +8,7 @@ export default function loadHome(){
     content.appendChild(createHeroSection());
     content.appendChild(createFeatureSection());
     content.appendChild(createQuoteSection());
+    content.appendChild(createFooter());
 }
 
 function createHeroSection(){
