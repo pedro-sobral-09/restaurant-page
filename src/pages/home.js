@@ -1,6 +1,5 @@
 import createElement from "./createElement.js";
 import heroImage from "../assets/images/heroImage.png";
-import createFooter from "./footer.js";
 import loadMenu from "./menu.js";
 
 export default function loadHome(){
@@ -10,7 +9,6 @@ export default function loadHome(){
     content.appendChild(createHeroSection());
     content.appendChild(createFeatureSection());
     content.appendChild(createQuoteSection());
-    content.appendChild(createFooter());
 
     addEventForViewMenu();
 }
@@ -33,7 +31,7 @@ function createHeroSubtitle(){
     const subtitle = createElement("div", "hero-subtitle", "");
     
     subtitle.appendChild(createElement("p", "p-subtitle", "Fresh ingredients. Handmade dishes. Memorable experiences."));
-    subtitle.appendChild(createElement("button", "button-subtitle btn-menu", "View Menu"));
+    subtitle.appendChild(createElement("button", "button-subtitle btn-view-menu", "View Menu"));
     
     return subtitle;
 }
@@ -79,9 +77,6 @@ function createBlockQuote(){
 }
 
 function addEventForViewMenu(){
-    const btnMenu = document.querySelectorAll(".btn-menu");
-
-    btnMenu.forEach(btn => {
-        btn.addEventListener("click", loadMenu);
-    });
+    const btnViewMenu = document.querySelector(".btn-view-menu");
+    btnViewMenu.addEventListener("click", loadMenu);
 }

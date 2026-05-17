@@ -1,11 +1,9 @@
 import createElement from "./createElement.js";
-import createFooter from "./footer.js";
 
 export default function loadMenu(){
     const content = document.querySelector("#content");
     content.innerHTML = ``;
     content.appendChild(createMenuSection());
-    content.appendChild(createFooter());
 }
 
 function createMenuSection(){
